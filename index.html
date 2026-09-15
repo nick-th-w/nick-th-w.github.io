@@ -37,6 +37,9 @@
     --line:#e4e2de;
     --bg:#ffffff;
     --card-bg:#ffffff;
+    --band-startup:#f4f3f1;
+    --band-scaleup:#eef1f2;
+    --band-finance:#f7f4ef;
     --max:960px;
   }
   :root[data-theme="dark"]{
@@ -48,6 +51,9 @@
     --line:#33352f;
     --bg:#15181a;
     --card-bg:#1b1f1e;
+    --band-startup:#1c2622;
+    --band-scaleup:#191d21;
+    --band-finance:#201c17;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -159,7 +165,13 @@
   .about-item ul li:last-child{margin-bottom:0;}
 
   /* TIMELINE */
-  .timeline{margin-top:32px;border-left:2px solid var(--line);padding-left:28px;}
+  .tl-era{padding:40px 0;}
+  .tl-era:first-of-type{padding-top:0;}
+  .tl-era-label{
+    font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:var(--green);margin-bottom:20px;
+  }
+  .timeline{margin-top:0;border-left:2px solid var(--line);padding-left:28px;}
   .tl-company{
     background:var(--card-bg);border:1px solid var(--line);border-radius:10px;
     padding:28px 28px 4px;margin-bottom:24px;
@@ -350,10 +362,15 @@
   </div>
 </section>
 
-<section id="experience" style="background:var(--green-light);">
+<section id="experience">
   <div class="wrap">
     <div class="eyebrow">Experience</div>
     <h2>Work history</h2>
+  </div>
+
+  <div class="tl-era" style="background:var(--band-startup);">
+  <div class="wrap">
+    <div class="tl-era-label">AU Startup Era &middot; 2021 &ndash; Present</div>
     <div class="timeline">
 
       <div class="tl-company">
@@ -406,6 +423,15 @@
         </div>
       </div>
 
+    </div>
+  </div>
+  </div>
+
+  <div class="tl-era" style="background:var(--band-scaleup);">
+  <div class="wrap">
+    <div class="tl-era-label">Scaleup Tech Era &middot; 2017 &ndash; 2020</div>
+    <div class="timeline">
+
       <div class="tl-company">
         <div class="tl-company-name">Grab</div>
         <div class="tl-item">
@@ -452,6 +478,15 @@
         </div>
       </div>
 
+    </div>
+  </div>
+  </div>
+
+  <div class="tl-era" style="background:var(--band-finance);">
+  <div class="wrap">
+    <div class="tl-era-label">Financial Services Era &middot; 2012 &ndash; 2017</div>
+    <div class="timeline">
+
       <div class="tl-company">
         <div class="tl-company-name">Bank of America Merrill Lynch</div>
         <div class="tl-item">
@@ -468,6 +503,7 @@
       </div>
 
     </div>
+  </div>
   </div>
 </section>
 
