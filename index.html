@@ -145,7 +145,7 @@
   /* STATS */
   .stats{background:var(--green-light);}
   .stats-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   }
   .stat{text-align:center;}
   .stat .num{font-size:30px;font-weight:800;color:var(--green);}
@@ -153,17 +153,24 @@
 
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:32px;}
-  .about-item .t{font-weight:700;color:var(--ink);margin-bottom:6px;font-size:16px;}
-  .about-item p{margin:0;color:var(--body);font-size:14.8px;}
+  .about-item .t{font-weight:700;color:var(--ink);margin-bottom:8px;font-size:16px;}
+  .about-item ul{margin:0;padding-left:18px;}
+  .about-item ul li{color:var(--body);font-size:14.8px;margin-bottom:6px;}
+  .about-item ul li:last-child{margin-bottom:0;}
 
   /* TIMELINE */
-  .timeline{margin-top:32px;border-left:2px solid var(--line);padding-left:28px;}
-  .tl-item{position:relative;padding-bottom:40px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:"";position:absolute;left:-33.5px;top:4px;
-    width:9px;height:9px;border-radius:50%;background:var(--green);
+  .timeline{margin-top:32px;}
+  .tl-company{
+    background:var(--card-bg);border:1px solid var(--line);border-radius:10px;
+    padding:28px 28px 4px;margin-bottom:24px;
   }
+  .tl-company:last-child{margin-bottom:0;}
+  .tl-company-name{
+    font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:var(--green);margin-bottom:20px;
+  }
+  .tl-item{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--line);}
+  .tl-item:last-child{padding-bottom:4px;margin-bottom:0;border-bottom:none;}
   .tl-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline;}
   .tl-role{font-weight:700;color:var(--ink);font-size:17px;}
   .tl-role .co{color:var(--green);}
@@ -208,11 +215,14 @@
   .edu-item{margin-bottom:18px;}
   .edu-item .t{font-weight:700;color:var(--ink);font-size:15px;}
   .edu-item .d{font-size:13.5px;color:var(--muted);margin-top:2px;}
+  .sub-heading{font-size:20px;font-weight:800;color:var(--ink);margin:32px 0 8px;}
+  .sub-heading + p{font-size:14px;color:var(--body);margin:0;}
   .ref-item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
   .ref-item:last-child{border-bottom:none;}
-  .ref-item .t{font-weight:700;color:var(--ink);font-size:14.5px;}
-  .ref-item .t a{color:inherit;text-decoration:none;}
-  .ref-item .t a:hover{color:var(--green);text-decoration:underline;}
+  .ref-item .t{font-weight:700;color:var(--ink);font-size:14.5px;display:flex;align-items:center;gap:7px;}
+  .li-icon{display:inline-flex;color:var(--muted);}
+  .li-icon svg{width:15px;height:15px;}
+  .li-icon:hover{color:var(--green);}
   .ref-item .d{font-size:13.5px;color:var(--muted);margin-top:2px;}
   .ref-note{font-size:13px;color:var(--muted);margin-top:8px;}
 
@@ -237,7 +247,7 @@
     .nav-cta{display:none;}
     .hero-grid{flex-direction:column;align-items:flex-start;text-align:left;}
     .hero h1{font-size:32px;}
-    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .case-grid{grid-template-columns:1fr;}
     .strength-grid{grid-template-columns:1fr;}
@@ -293,9 +303,8 @@
 <section class="stats">
   <div class="wrap stats-grid">
     <div class="stat"><div class="num">15+</div><div class="label">Years of work experience</div></div>
-    <div class="stat"><div class="num">3</div><div class="label">Countries lived &amp; worked in</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">Countries lived and worked in</div></div>
     <div class="stat"><div class="num">5</div><div class="label">Operating functions built from zero</div></div>
-    <div class="stat"><div class="num">3&ndash;4x</div><div class="label">ARR growth backed by ops at Veridooh</div></div>
   </div>
 </section>
 
@@ -306,19 +315,33 @@
     <div class="about-grid">
       <div class="about-item">
         <div class="t">Founder partnership &amp; leadership</div>
-        <p>Trusted as core leadership team member and direct thought partner to founder/CEOs in my last 3 roles. Currently own day to day execution as most senior non-founder at Veridooh.</p>
+        <ul>
+          <li>Trusted as core leadership team member and direct thought partner to founder/CEOs in my last 3 roles.</li>
+          <li>Currently own day to day execution as most senior non-founder at Veridooh.</li>
+        </ul>
       </div>
       <div class="about-item">
         <div class="t">Marketplace growth and operations</div>
-        <p>4 years leading marketplace operations at Grab and Uber across APAC. Built and led the Strategic Operations function that took GrabFood from launch to South-East Asia market leadership in under 2 years, owning all key marketplace metrics including consumer conversion, reliability and profitability. Built the analytics and insights capability the function ran on.</p>
+        <ul>
+          <li>4 years leading marketplace operations at Grab and Uber across APAC.</li>
+          <li>Built and led the Strategic Operations function that took GrabFood from launch to South-East Asia market leadership in under 2 years, owning all key marketplace metrics including consumer conversion, reliability and profitability.</li>
+          <li>Built the analytics and insights capability the function ran on.</li>
+        </ul>
       </div>
       <div class="about-item">
         <div class="t">Cross functional programs, end to end</div>
-        <p>Lead initiatives from conception through execution to measurement across operations, product, engineering, marketing and sales teams. From the annual strategy, planning and OKR cycle at Veridooh, to operationally complex cross functional initiatives at Zoomo, Grab and Uber. Also lead people and culture initiatives, including eNPS and half-yearly performance reviews.</p>
+        <ul>
+          <li>Lead initiatives from conception through execution to measurement across operations, product, engineering, marketing and sales teams.</li>
+          <li>Own the annual strategy, planning and OKR cycle at Veridooh, plus operationally complex cross functional initiatives at Zoomo, Grab and Uber.</li>
+          <li>Also lead people and culture initiatives, including eNPS and half-yearly performance reviews.</li>
+        </ul>
       </div>
       <div class="about-item">
         <div class="t">Commercial judgement</div>
-        <p>Prior experience with P&amp;L and go to market ownership in Australia and APAC. Currently responsible for Finance, Legal and People functions and corporate governance across AU, UK and US entities.</p>
+        <ul>
+          <li>Prior experience with P&amp;L and go to market ownership in Australia and APAC.</li>
+          <li>Currently responsible for Finance, Legal and People functions and corporate governance across AU, UK and US entities.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -330,99 +353,115 @@
     <h2>Work history</h2>
     <div class="timeline">
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Head of Business Operations / <span class="co">Veridooh</span></div>
-          <div class="tl-date">Oct 2023 &ndash; Present, Sydney</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Veridooh</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Head of Business Operations</div>
+            <div class="tl-date">Oct 2023 &ndash; Present, Sydney</div>
+          </div>
+          <div class="tl-sub">Series A (EVP)</div>
+          <div class="tl-desc">Own strategy, operations, finance and people across 3 entities / 5 countries, including internal communications (monthly town halls) and board reporting, and sit as board observer &mdash; reporting directly to two co-founders and co-CEOs.</div>
+          <ul>
+            <li><b>Strategy &amp; Planning:</b> Runs the annual strategy and planning cycle (Launch Day/Launch Week), including Vision/Mission refresh, Company Principles updates, annual OKRs, and company budgets/targets. Planned and delivered the inaugural 4 day, company wide global offsite in Bali.</li>
+            <li><b>Growth &amp; Revenue Ops:</b> Rebuilt how revenue is measured and incentivised across the business. Redesigned multiple versions of sales team targets and commission structures, introduced fortnightly commercial pipeline reviews, and upgraded OKR and scorecard tracking infrastructure. These activities have been the backbone to driving 3&ndash;4x ARR growth.</li>
+            <li><b>AI &amp; Analytics:</b> Directed the AI and automation program, taking multiple agents into production across contract review, board reporting, onboarding, interview prep and cash position tracking. Rebuilt commercial pipeline reporting on AI tooling, replacing manual reporting cycles.</li>
+            <li><b>Finance, Legal and People:</b> Own these functions across the group. Highlights include managing month-end and consolidated P&amp;L and board pack reporting, owning the financial workstream for a Series B raise through to multiple signed term sheets, setup of UK and US entities, overseeing 15 hires in 6 month hiring sprint.</li>
+            <li><b>People &amp; Culture:</b> Implemented the company's first performance management framework, including half-yearly performance reviews. Oversaw eNPS improvement from 0 to 50+.</li>
+          </ul>
         </div>
-        <div class="tl-sub">Series A (EVP)</div>
-        <div class="tl-desc">Own strategy, operations, finance and people across 3 entities / 5 countries, including internal communications (monthly town halls) and board reporting, and sit as board observer &mdash; reporting directly to two co-founders and co-CEOs.</div>
-        <ul>
-          <li><b>Strategy &amp; Planning:</b> Runs the annual strategy and planning cycle (Launch Day/Launch Week), including Vision/Mission refresh, Company Principles updates, annual OKRs, and company budgets/targets. Planned and delivered the inaugural 4 day, company wide global offsite in Bali.</li>
-          <li><b>Growth &amp; Revenue Ops:</b> Rebuilt how revenue is measured and incentivised across the business. Redesigned multiple versions of sales team targets and commission structures, introduced fortnightly commercial pipeline reviews, and upgraded OKR and scorecard tracking infrastructure. These activities have been the backbone to driving 3&ndash;4x ARR growth.</li>
-          <li><b>AI &amp; Analytics:</b> Directed the AI and automation program, taking multiple agents into production across contract review, board reporting, onboarding, interview prep and cash position tracking. Rebuilt commercial pipeline reporting on AI tooling, replacing manual reporting cycles.</li>
-          <li><b>Finance, Legal and People:</b> Own these functions across the group. Highlights include managing month-end and consolidated P&amp;L and board pack reporting, owning the financial workstream for a Series B raise through to multiple signed term sheets, setup of UK and US entities, overseeing 15 hires in 6 month hiring sprint.</li>
-          <li><b>People &amp; Culture:</b> Implemented the company's first performance management framework, including half-yearly performance reviews. Oversaw eNPS improvement from 0 to 50+.</li>
-        </ul>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">General Manager, Australia / <span class="co">Momos</span></div>
-          <div class="tl-date">Apr 2022 &ndash; Mar 2023, Sydney</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Momos</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">General Manager, Australia</div>
+            <div class="tl-date">Apr 2022 &ndash; Mar 2023, Sydney</div>
+          </div>
+          <div class="tl-sub">Seed Stage (Sequoia Capital)</div>
+          <div class="tl-desc">Launcher and General Manager for the Australian market for Momos, B2B SaaS company for hospitality, owning full P&amp;L and market metrics and reporting to the co-founder and CEO.</div>
+          <ul>
+            <li>Owned and personally executed the GTM strategy end to end from prospecting and pitching to onboarding, training and support of first 5 mid-market customers.</li>
+          </ul>
         </div>
-        <div class="tl-sub">Seed Stage (Sequoia Capital)</div>
-        <div class="tl-desc">Launcher and General Manager for the Australian market for Momos, B2B SaaS company for hospitality, owning full P&amp;L and market metrics and reporting to the co-founder and CEO.</div>
-        <ul>
-          <li>Owned and personally executed the GTM strategy end to end from prospecting and pitching to onboarding, training and support of first 5 mid-market customers.</li>
-        </ul>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Head of Global Operations / <span class="co">Zoomo</span></div>
-          <div class="tl-date">Jan 2021 &ndash; Apr 2022, Sydney</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Zoomo</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Head of Global Operations</div>
+            <div class="tl-date">Jan 2021 &ndash; Apr 2022, Sydney</div>
+          </div>
+          <div class="tl-sub">Series A to Series B (Airtree, Grok Ventures)</div>
+          <div class="tl-desc">Built and led core central operations and customer functions across Australia, the UK, the US and the EU, as part of the Global Leadership Team reporting to the co-founder and COO.</div>
+          <ul>
+            <li>Set up core processes, functions and teams from scratch: Fleet and Asset Management, Ops Planning, Ops Analytics and Ops Strategy, for a highly complex operational business (e-bike hardware plus fleet management software).</li>
+            <li>Built the analytics and planning layer that the global operations teams ran on across AU, UK, EU and US.</li>
+          </ul>
         </div>
-        <div class="tl-sub">Series A to Series B (Airtree, Grok Ventures)</div>
-        <div class="tl-desc">Built and led core central operations and customer functions across Australia, the UK, the US and the EU, as part of the Global Leadership Team reporting to the co-founder and COO.</div>
-        <ul>
-          <li>Set up core processes, functions and teams from scratch: Fleet and Asset Management, Ops Planning, Ops Analytics and Ops Strategy, for a highly complex operational business (e-bike hardware plus fleet management software).</li>
-          <li>Built the analytics and planning layer that the global operations teams ran on across AU, UK, EU and US.</li>
-        </ul>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Head of Strategic Operations and Regional Business Owner / <span class="co">Grab</span></div>
-          <div class="tl-date">Jan 2019 &ndash; Dec 2020, Singapore</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Grab</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Head of Strategic Operations and Regional Business Owner</div>
+            <div class="tl-date">Jan 2019 &ndash; Dec 2020, Singapore</div>
+          </div>
+          <div class="tl-sub">Series G to Pre-IPO (Softbank)</div>
+          <div class="tl-desc">Built and led the Strategic Operations function for GrabFood, reporting directly to the Head of GrabFood. Core part of leadership team that took the business from launch to regional market leadership across South-East Asia in under 2 years.</div>
+          <ul>
+            <li><b>Marketplace Performance:</b> Owned key marketplace health activities across the region, at a scale of 500,000+ merchant partners and deliveries per day, with specific focus on Indonesia. Built and ran 6 squads against distinct marketplace outcomes: Consumer Ops, Marketplace, Ops Analytics and Insights, Product Ops, Merchant Strategy and Merchant Engagement.</li>
+            <li><b>Cross functional programs:</b> As Regional Business Owner, led a team of 4 owning the GrabFood and GrabMart product roadmap, prioritisation, rollout and impact measurement across 8 countries.</li>
+            <li><b>Scaling distributed teams:</b> Hired, built and led a combined Indonesia and Regional Ops team, 25+ full time staff and 70+ including contractors, across 3 countries.</li>
+          </ul>
         </div>
-        <div class="tl-sub">Series G to Pre-IPO (Softbank)</div>
-        <div class="tl-desc">Built and led the Strategic Operations function for GrabFood, reporting directly to the Head of GrabFood. Core part of leadership team that took the business from launch to regional market leadership across South-East Asia in under 2 years.</div>
-        <ul>
-          <li><b>Marketplace Performance:</b> Owned key marketplace health activities across the region, at a scale of 500,000+ merchant partners and deliveries per day, with specific focus on Indonesia. Built and ran 6 squads against distinct marketplace outcomes: Consumer Ops, Marketplace, Ops Analytics and Insights, Product Ops, Merchant Strategy and Merchant Engagement.</li>
-          <li><b>Cross functional programs:</b> As Regional Business Owner, led a team of 4 owning the GrabFood and GrabMart product roadmap, prioritisation, rollout and impact measurement across 8 countries.</li>
-          <li><b>Scaling distributed teams:</b> Hired, built and led a combined Indonesia and Regional Ops team, 25+ full time staff and 70+ including contractors, across 3 countries.</li>
-        </ul>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">General Manager, GrabFood Jakarta</div>
+            <div class="tl-date">Mar 2019 &ndash; Aug 2019, Jakarta</div>
+          </div>
+          <div class="tl-desc">First GM for GrabFood Jakarta. Set up the City GM structure and owned P&amp;L, strategy, sales and operations for the largest city in South-East Asia.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Regional Strategy Operations Manager</div>
+            <div class="tl-date">Jun 2018 &ndash; Jan 2019, Singapore</div>
+          </div>
+          <div class="tl-desc">Owned consumer order growth and conversion for GrabFood regionally, working across product, marketing, operations and sales.</div>
+        </div>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">General Manager, GrabFood Jakarta / <span class="co">Grab</span></div>
-          <div class="tl-date">Mar 2019 &ndash; Aug 2019, Jakarta</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Uber</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Regional Community Operations Manager</div>
+            <div class="tl-date">Mar 2017 &ndash; Jun 2018, Singapore</div>
+          </div>
+          <div class="tl-sub">Role ended due to Grab-Uber merger</div>
+          <ul>
+            <li>Managed customer experience and support operations for Uber Eats delivery partners across 7 countries, working with offshore BPO vendors and in-country teams against SLA and cost targets.</li>
+            <li>As APAC Defect Reduction Champion, investigated root causes and worked upstream with product and operations to reduce total support volume and cost across APAC. Delivered double digit defect rate reduction in multiple countries plus CSAT targets achieved.</li>
+          </ul>
         </div>
-        <div class="tl-desc">First GM for GrabFood Jakarta. Set up the City GM structure and owned P&amp;L, strategy, sales and operations for the largest city in South-East Asia.</div>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Regional Strategy Operations Manager / <span class="co">Grab</span></div>
-          <div class="tl-date">Jun 2018 &ndash; Jan 2019, Singapore</div>
+      <div class="tl-company">
+        <div class="tl-company-name">Bank of America Merrill Lynch</div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-role">Global Transaction Services</div>
+            <div class="tl-date">Jan 2012 &ndash; Feb 2017, Sydney</div>
+          </div>
+          <ul>
+            <li><b>APAC Business Banking:</b> Led business banking client coverage across APAC, owning overall revenue generation for the client segment for 2.5 years.</li>
+            <li><b>Australia Treasury Sales:</b> Business development and account management of key US multinational corporate clients with Australian operations, across NSW and VIC, for 3.5 years.</li>
+            <li>18 month graduate program across Treasury Management Sales, Product Management and Trade Finance.</li>
+          </ul>
         </div>
-        <div class="tl-desc">Owned consumer order growth and conversion for GrabFood regionally, working across product, marketing, operations and sales.</div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Regional Community Operations Manager / <span class="co">Uber</span></div>
-          <div class="tl-date">Mar 2017 &ndash; Jun 2018, Singapore</div>
-        </div>
-        <div class="tl-sub">Role ended due to Grab-Uber merger</div>
-        <ul>
-          <li>Managed customer experience and support operations for Uber Eats delivery partners across 7 countries, working with offshore BPO vendors and in-country teams against SLA and cost targets.</li>
-          <li>As APAC Defect Reduction Champion, investigated root causes and worked upstream with product and operations to reduce total support volume and cost across APAC. Delivered double digit defect rate reduction in multiple countries plus CSAT targets achieved.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-head">
-          <div class="tl-role">Global Transaction Services / <span class="co">Bank of America Merrill Lynch</span></div>
-          <div class="tl-date">Jan 2012 &ndash; Feb 2017, Sydney</div>
-        </div>
-        <ul>
-          <li><b>APAC Business Banking:</b> Led business banking client coverage across APAC, owning overall revenue generation for the client segment for 2.5 years.</li>
-          <li><b>Australia Treasury Sales:</b> Business development and account management of key US multinational corporate clients with Australian operations, across NSW and VIC, for 3.5 years.</li>
-          <li>18 month graduate program across Treasury Management Sales, Product Management and Trade Finance.</li>
-        </ul>
       </div>
 
     </div>
@@ -439,7 +478,8 @@
         <div class="co-tag">Veridooh &middot; 2023&ndash;present</div>
         <h3>Rebuilding revenue ops to drive ARR growth</h3>
         <p>Redesigned sales targets and commission structures, introduced fortnightly commercial pipeline reviews, and upgraded OKR and scorecard tracking infrastructure across the business.</p>
-        <span class="case-metric">Backbone to 3&ndash;4x ARR growth</span>
+        <span class="case-metric">Backbone to 3&ndash;4x ARR growth</span><br>
+        <span class="case-metric" style="margin-top:8px;">Churn &lt;1% MoM</span>
       </div>
 
       <div class="case-card">
@@ -447,8 +487,7 @@
         <h3>Taking GrabFood to market leadership</h3>
         <p>Built and led the Strategic Operations function for GrabFood across South-East Asia, running 6 squads against distinct marketplace outcomes at a scale of 500,000+ merchant partners and deliveries per day.</p>
         <span class="case-metric">Reliability up 30pp, launch to scale</span><br>
-        <span class="case-metric" style="margin-top:8px;">1.5x per unit economics</span><br>
-        <span class="case-metric" style="margin-top:8px;">+3pp conversion via photo improvement project</span>
+        <span class="case-metric" style="margin-top:8px;">1.5x per unit economics</span>
       </div>
 
       <div class="case-card">
@@ -520,30 +559,28 @@
           <div class="t">Bachelor of Commerce</div>
           <div class="d">University of Sydney &mdash; Finance &middot; 2007&ndash;2009</div>
         </div>
-        <div class="edu-item">
-          <div class="t">Languages &amp; base</div>
-          <div class="d">Fluent in English and Cantonese &middot; Based in Sydney, NSW, Australia</div>
-        </div>
       </div>
+      <div class="sub-heading">Languages &amp; base</div>
+      <p>Fluent in English and Cantonese. Based in Sydney, NSW, Australia.</p>
     </div>
     <div>
       <div class="eyebrow">References</div>
       <h2>Who I've worked with</h2>
       <div style="margin-top:24px;">
         <div class="ref-item">
-          <div class="t"><a href="https://www.linkedin.com/in/sai-alluri-51b53b61" target="_blank" rel="noopener">Sai Alluri</a></div>
+          <div class="t">Sai Alluri <a class="li-icon" href="https://www.linkedin.com/in/sai-alluri-51b53b61" target="_blank" rel="noopener" aria-label="Sai Alluri on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-2.26-1.84-2.26A2 2 0 0 0 12 14.5V19H9v-9h3v1.5a3.4 3.4 0 0 1 3-1.5c2 0 3 1.5 3 4.5z"/></svg></a></div>
           <div class="d">Momos &mdash; Co-Founder and CEO, ex-Grab Director (NY)</div>
         </div>
         <div class="ref-item">
-          <div class="t"><a href="https://uk.linkedin.com/in/michael-johnson-1aaaa466" target="_blank" rel="noopener">Michael Johnson</a></div>
+          <div class="t">Michael Johnson <a class="li-icon" href="https://uk.linkedin.com/in/michael-johnson-1aaaa466" target="_blank" rel="noopener" aria-label="Michael Johnson on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-2.26-1.84-2.26A2 2 0 0 0 12 14.5V19H9v-9h3v1.5a3.4 3.4 0 0 1 3-1.5c2 0 3 1.5 3 4.5z"/></svg></a></div>
           <div class="d">Zoomo &mdash; Co-Founder and CRO, ex-COO (UK)</div>
         </div>
         <div class="ref-item">
-          <div class="t"><a href="https://sg.linkedin.com/in/demiyu" target="_blank" rel="noopener">Demi Yu</a></div>
+          <div class="t">Demi Yu <a class="li-icon" href="https://sg.linkedin.com/in/demiyu" target="_blank" rel="noopener" aria-label="Demi Yu on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-2.26-1.84-2.26A2 2 0 0 0 12 14.5V19H9v-9h3v1.5a3.4 3.4 0 0 1 3-1.5c2 0 3 1.5 3 4.5z"/></svg></a></div>
           <div class="d">Grab &mdash; SVP, ex-Head of GrabFood, ex-Uber Regional GM (SG)</div>
         </div>
         <div class="ref-item">
-          <div class="t"><a href="https://au.linkedin.com/in/kees-kwakernaak-468a281" target="_blank" rel="noopener">Kees Kwakernaak</a></div>
+          <div class="t">Kees Kwakernaak <a class="li-icon" href="https://au.linkedin.com/in/kees-kwakernaak-468a281" target="_blank" rel="noopener" aria-label="Kees Kwakernaak on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-2.26-1.84-2.26A2 2 0 0 0 12 14.5V19H9v-9h3v1.5a3.4 3.4 0 0 1 3-1.5c2 0 3 1.5 3 4.5z"/></svg></a></div>
           <div class="d">Fat Zebra &mdash; COO, ex-Bank of America Merrill Lynch Managing Director (AU)</div>
         </div>
       </div>
@@ -555,7 +592,7 @@
 <section class="contact-cta">
   <div class="wrap">
     <h2>Let's talk</h2>
-    <p>Open to conversations on business operations, growth and scaling leadership roles.</p>
+    <p>Open to conversations on business operations, growth and scaling challenges.</p>
     <div class="hero-actions" style="justify-content:center;">
       <a class="btn btn-primary" href="mailto:nicolas.wong89@gmail.com">Email me</a>
       <a class="btn btn-secondary" href="https://linkedin.com/in/nick-wong1" target="_blank" rel="noopener">Connect on LinkedIn</a>
