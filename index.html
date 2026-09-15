@@ -159,7 +159,7 @@
   .about-item ul li:last-child{margin-bottom:0;}
 
   /* TIMELINE */
-  .timeline{margin-top:32px;}
+  .timeline{margin-top:32px;border-left:2px solid var(--line);padding-left:28px;}
   .tl-company{
     background:var(--card-bg);border:1px solid var(--line);border-radius:10px;
     padding:28px 28px 4px;margin-bottom:24px;
@@ -169,8 +169,12 @@
     font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
     color:var(--green);margin-bottom:20px;
   }
-  .tl-item{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--line);}
+  .tl-item{position:relative;padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--line);}
   .tl-item:last-child{padding-bottom:4px;margin-bottom:0;border-bottom:none;}
+  .tl-item::before{
+    content:"";position:absolute;left:-60px;top:4px;
+    width:9px;height:9px;border-radius:50%;background:var(--green);
+  }
   .tl-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline;}
   .tl-role{font-weight:700;color:var(--ink);font-size:17px;}
   .tl-role .co{color:var(--green);}
@@ -215,8 +219,8 @@
   .edu-item{margin-bottom:18px;}
   .edu-item .t{font-weight:700;color:var(--ink);font-size:15px;}
   .edu-item .d{font-size:13.5px;color:var(--muted);margin-top:2px;}
-  .sub-heading{font-size:20px;font-weight:800;color:var(--ink);margin:32px 0 8px;}
-  .sub-heading + p{font-size:14px;color:var(--body);margin:0;}
+  .lang-heading{margin-top:32px;}
+  .lang-heading + p{font-size:14px;color:var(--body);margin-top:10px;}
   .ref-item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line);}
   .ref-item:last-child{border-bottom:none;}
   .ref-item .t{font-weight:700;color:var(--ink);font-size:14.5px;display:flex;align-items:center;gap:7px;}
@@ -266,7 +270,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#strengths">Strengths &amp; Principles</a></li>
+      <li><a href="#education">Education &amp; References</a></li>
     </ul>
     <div class="nav-right">
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
@@ -317,30 +322,28 @@
         <div class="t">Founder partnership &amp; leadership</div>
         <ul>
           <li>Trusted as core leadership team member and direct thought partner to founder/CEOs in my last 3 roles.</li>
-          <li>Currently own day to day execution as most senior non-founder at Veridooh.</li>
+          <li>Currently own day to day execution as most senior non-founder and board observer at Veridooh.</li>
         </ul>
       </div>
       <div class="about-item">
-        <div class="t">Marketplace growth and operations</div>
+        <div class="t">Cross functional impact, end to end</div>
         <ul>
-          <li>4 years leading marketplace operations at Grab and Uber across APAC.</li>
-          <li>Built and led the Strategic Operations function that took GrabFood from launch to South-East Asia market leadership in under 2 years, owning all key marketplace metrics including consumer conversion, reliability and profitability.</li>
-          <li>Built the analytics and insights capability the function ran on.</li>
+          <li>Lead initiatives from conception through execution to measurement across leadership teams, as well as across functional teams (i.e. operations, product, engineering, marketing and sales).</li>
+          <li>From owning annual strategy, planning and OKR cycles at Veridooh, to operationally complex cross functional initiatives at Zoomo, Grab and Uber, with a strong focus on product x operations collaboration.</li>
         </ul>
       </div>
       <div class="about-item">
-        <div class="t">Cross functional programs, end to end</div>
+        <div class="t">Data-driven growth and operations</div>
         <ul>
-          <li>Lead initiatives from conception through execution to measurement across operations, product, engineering, marketing and sales teams.</li>
-          <li>Own the annual strategy, planning and OKR cycle at Veridooh, plus operationally complex cross functional initiatives at Zoomo, Grab and Uber.</li>
-          <li>Also lead people and culture initiatives, including eNPS and half-yearly performance reviews.</li>
+          <li>4 years leading marketplace operations at Grab and Uber across APAC in highly competitive markets.</li>
+          <li>Built and led the Strategic Operations function that took GrabFood from launch to South-East Asia market leadership in under 2 years, owning all key marketplace metrics (growth, reliability, profitability).</li>
         </ul>
       </div>
       <div class="about-item">
-        <div class="t">Commercial judgement</div>
+        <div class="t">Broad financial and business/team management expertise</div>
         <ul>
-          <li>Prior experience with P&amp;L and go to market ownership in Australia and APAC.</li>
           <li>Currently responsible for Finance, Legal and People functions and corporate governance across AU, UK and US entities.</li>
+          <li>Prior experience leading P&amp;L, GTM and various team leadership responsibilities in AU and APAC.</li>
         </ul>
       </div>
     </div>
@@ -358,7 +361,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Head of Business Operations</div>
-            <div class="tl-date">Oct 2023 &ndash; Present, Sydney</div>
+            <div class="tl-date">Oct 2023 &ndash; Present, &#127462;&#127482; Sydney</div>
           </div>
           <div class="tl-sub">Series A (EVP)</div>
           <div class="tl-desc">Own strategy, operations, finance and people across 3 entities / 5 countries, including internal communications (monthly town halls) and board reporting, and sit as board observer &mdash; reporting directly to two co-founders and co-CEOs.</div>
@@ -377,7 +380,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">General Manager, Australia</div>
-            <div class="tl-date">Apr 2022 &ndash; Mar 2023, Sydney</div>
+            <div class="tl-date">Apr 2022 &ndash; Mar 2023, &#127462;&#127482; Sydney</div>
           </div>
           <div class="tl-sub">Seed Stage (Sequoia Capital)</div>
           <div class="tl-desc">Launcher and General Manager for the Australian market for Momos, B2B SaaS company for hospitality, owning full P&amp;L and market metrics and reporting to the co-founder and CEO.</div>
@@ -392,7 +395,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Head of Global Operations</div>
-            <div class="tl-date">Jan 2021 &ndash; Apr 2022, Sydney</div>
+            <div class="tl-date">Jan 2021 &ndash; Apr 2022, &#127462;&#127482; Sydney</div>
           </div>
           <div class="tl-sub">Series A to Series B (Airtree, Grok Ventures)</div>
           <div class="tl-desc">Built and led core central operations and customer functions across Australia, the UK, the US and the EU, as part of the Global Leadership Team reporting to the co-founder and COO.</div>
@@ -408,7 +411,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Head of Strategic Operations and Regional Business Owner</div>
-            <div class="tl-date">Jan 2019 &ndash; Dec 2020, Singapore</div>
+            <div class="tl-date">Jan 2019 &ndash; Dec 2020, &#127480;&#127468; Singapore</div>
           </div>
           <div class="tl-sub">Series G to Pre-IPO (Softbank)</div>
           <div class="tl-desc">Built and led the Strategic Operations function for GrabFood, reporting directly to the Head of GrabFood. Core part of leadership team that took the business from launch to regional market leadership across South-East Asia in under 2 years.</div>
@@ -421,14 +424,14 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">General Manager, GrabFood Jakarta</div>
-            <div class="tl-date">Mar 2019 &ndash; Aug 2019, Jakarta</div>
+            <div class="tl-date">Mar 2019 &ndash; Aug 2019, &#127470;&#127465; Jakarta</div>
           </div>
           <div class="tl-desc">First GM for GrabFood Jakarta. Set up the City GM structure and owned P&amp;L, strategy, sales and operations for the largest city in South-East Asia.</div>
         </div>
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Regional Strategy Operations Manager</div>
-            <div class="tl-date">Jun 2018 &ndash; Jan 2019, Singapore</div>
+            <div class="tl-date">Jun 2018 &ndash; Jan 2019, &#127480;&#127468; Singapore</div>
           </div>
           <div class="tl-desc">Owned consumer order growth and conversion for GrabFood regionally, working across product, marketing, operations and sales.</div>
         </div>
@@ -439,7 +442,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Regional Community Operations Manager</div>
-            <div class="tl-date">Mar 2017 &ndash; Jun 2018, Singapore</div>
+            <div class="tl-date">Mar 2017 &ndash; Jun 2018, &#127480;&#127468; Singapore</div>
           </div>
           <div class="tl-sub">Role ended due to Grab-Uber merger</div>
           <ul>
@@ -454,7 +457,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <div class="tl-role">Global Transaction Services</div>
-            <div class="tl-date">Jan 2012 &ndash; Feb 2017, Sydney</div>
+            <div class="tl-date">Jan 2012 &ndash; Feb 2017, &#127462;&#127482; Sydney</div>
           </div>
           <ul>
             <li><b>APAC Business Banking:</b> Led business banking client coverage across APAC, owning overall revenue generation for the client segment for 2.5 years.</li>
@@ -502,7 +505,7 @@
   </div>
 </section>
 
-<section>
+<section id="strengths">
   <div class="wrap">
     <div class="eyebrow">Strengths &amp; Principles</div>
     <h2>How I operate</h2>
@@ -545,7 +548,7 @@
   <div class="wrap two-col">
     <div>
       <div class="eyebrow">Education</div>
-      <h2>Academic background</h2>
+      <h2>Education &amp; Languages</h2>
       <div style="margin-top:24px;">
         <div class="edu-item">
           <div class="t">Bachelor of Laws</div>
@@ -560,8 +563,8 @@
           <div class="d">University of Sydney &mdash; Finance &middot; 2007&ndash;2009</div>
         </div>
       </div>
-      <div class="sub-heading">Languages &amp; base</div>
-      <p>Fluent in English and Cantonese. Based in Sydney, NSW, Australia.</p>
+      <h2 class="lang-heading">Languages</h2>
+      <p>Fluent in English and Cantonese.</p>
     </div>
     <div>
       <div class="eyebrow">References</div>
