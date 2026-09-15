@@ -166,7 +166,7 @@
 
   /* TIMELINE */
   .tl-era{padding:40px 0;border-top:1px solid var(--line);}
-  .tl-era:first-of-type{padding-top:40px;border-top:none;}
+  .tl-era.tl-era-first{border-top:none;}
   .tl-era-label{
     font-size:13px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
     color:var(--green);margin-bottom:20px;
@@ -367,7 +367,7 @@
     <h2>Work history</h2>
   </div>
 
-  <div class="tl-era" style="background:var(--band-startup);">
+  <div class="tl-era tl-era-first" style="background:var(--band-startup);">
   <div class="wrap">
     <div class="tl-era-label">AU Startup Era &middot; 2021 &ndash; Present</div>
     <div class="timeline">
@@ -683,9 +683,8 @@
 </script>
 
 <!-- Privacy-friendly analytics (GoatCounter, no cookies/consent banner needed).
-     Sign up free at https://www.goatcounter.com, then replace YOUR-CODE below
-     with the site code it gives you. Until then this script does nothing. -->
-<script data-goatcounter="https://YOUR-CODE.goatcounter.com/count"
+     Stats: https://nick-th-w.goatcounter.com -->
+<script data-goatcounter="https://nick-th-w.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
 </body>
