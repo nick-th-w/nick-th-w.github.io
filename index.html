@@ -91,7 +91,7 @@
   nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:16px;}
   .nav-name{font-weight:800;letter-spacing:.5px;color:var(--ink);text-decoration:none;font-size:15px;white-space:nowrap;}
   .nav-links{display:flex;gap:22px;list-style:none;margin:0;padding:0;}
-  .nav-links a{color:var(--body);text-decoration:none;font-size:14px;}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:14px;white-space:nowrap;}
   .nav-links a:hover{color:var(--green);}
   .nav-right{display:flex;align-items:center;gap:14px;margin-left:auto;}
   .nav-cta{
@@ -257,7 +257,7 @@
   .contact-cta .btn-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);}
   footer{padding:28px 0;text-align:center;font-size:12.5px;color:var(--muted);}
 
-  @media (max-width:800px){
+  @media (max-width:1024px){
     .nav-toggle{display:flex;}
     .nav-links{
       display:none;position:absolute;top:100%;left:0;right:0;
@@ -267,6 +267,8 @@
     .nav-links.open{display:flex;}
     .nav-links a{display:block;padding:10px 0;border-bottom:1px solid var(--line);}
     .nav-links li:last-child a{border-bottom:none;}
+  }
+  @media (max-width:800px){
     .nav-cta{display:none;}
     .hero-grid{flex-direction:column;align-items:flex-start;text-align:left;}
     .hero h1{font-size:32px;}
