@@ -158,11 +158,15 @@
   .stat .label{font-size:13px;color:var(--muted);margin-top:4px;}
 
   /* ABOUT */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:32px;}
-  .about-item .t{font-weight:700;color:var(--ink);margin-bottom:8px;font-size:16px;}
-  .about-item ul{margin:0;padding-left:18px;}
-  .about-item ul li{color:var(--body);font-size:14.8px;margin-bottom:6px;}
-  .about-item ul li:last-child{margin-bottom:0;}
+  .about-intro{max-width:68ch;margin-top:16px;font-size:16px;}
+  .stage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px;}
+  .stage{border:1px solid var(--line);border-top:3px solid var(--green);border-radius:10px;padding:22px 22px 18px;background:var(--card-bg);}
+  .stage-label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--green);}
+  .stage-cos{font-weight:700;color:var(--ink);font-size:16px;margin:4px 0 10px;}
+  .stage-callout{font-size:13.5px;font-style:italic;color:var(--muted);margin:-6px 0 10px;}
+  .stage p{font-size:14.5px;margin:0 0 14px;}
+  .stage-proof{list-style:none;margin:0;padding:0;}
+  .stage-proof li{font-size:13.5px;font-weight:600;color:var(--ink);padding:6px 0;border-top:1px solid var(--line);}
 
   /* TIMELINE */
   .tl-era{padding:40px 0;border-top:1px solid var(--line);}
@@ -262,7 +266,7 @@
     .hero-grid{flex-direction:column;align-items:flex-start;text-align:left;}
     .hero h1{font-size:32px;}
     .stats-grid{grid-template-columns:1fr;}
-    .about-grid{grid-template-columns:1fr;}
+    .stage-grid{grid-template-columns:1fr;}
     .case-grid{grid-template-columns:1fr;}
     .strength-grid{grid-template-columns:1fr;}
     .principle-grid{grid-template-columns:1fr;}
@@ -328,33 +332,28 @@
   <div class="wrap">
     <div class="eyebrow">About</div>
     <h2>Trusted Operator</h2>
-    <div class="about-grid">
-      <div class="about-item">
-        <div class="t">Founder partnership &amp; leadership</div>
-        <ul>
-          <li>Trusted as core leadership team member and direct thought partner to founder/CEOs in my last 3 roles.</li>
-          <li>Currently own day to day execution as most senior non-founder and board observer at Veridooh.</li>
+    <p class="about-intro">Core leadership team member and direct thought partner to founder/CEOs in my last 3 roles. Today I'm the most senior non-founder and board observer at Veridooh. I've built and run operations at Series A&ndash;B startups and in launch teams inside APAC's largest scaleups.</p>
+    <div class="stage-grid">
+      <div class="stage">
+        <div class="stage-label">Series A &rarr; B</div>
+        <div class="stage-cos">Zoomo &middot; Veridooh</div>
+        <p>Built the operating engine: strategy, finance, people, operations and legal, across AU, UK, EU and US.</p>
+        <ul class="stage-proof">
+          <li>3&ndash;4x ARR growth</li>
+          <li>Series B raise to signed term sheets</li>
+          <li>eNPS 0 &rarr; 72+ &middot; SOC2 Type II</li>
+          <li>Built AI-native, lean functions across multiple departments</li>
         </ul>
       </div>
-      <div class="about-item">
-        <div class="t">Cross functional impact, end to end</div>
-        <ul>
-          <li>Lead initiatives from conception through execution to measurement across leadership teams, as well as across functional teams (i.e. operations, product, engineering, marketing and sales).</li>
-          <li>From owning annual strategy, planning and OKR cycles at Veridooh, to operationally complex cross functional initiatives at Zoomo, Grab and Uber, with a strong focus on product x operations collaboration.</li>
-        </ul>
-      </div>
-      <div class="about-item">
-        <div class="t">Data-driven growth and operations</div>
-        <ul>
-          <li>4 years leading marketplace operations at Grab and Uber across APAC in highly competitive markets.</li>
-          <li>Built and led the Strategic Operations function that took GrabFood from launch to South-East Asia market leadership in under 2 years, owning all key marketplace metrics (growth, reliability, profitability).</li>
-        </ul>
-      </div>
-      <div class="about-item">
-        <div class="t">Broad financial and business/team management expertise</div>
-        <ul>
-          <li>Currently responsible for Finance, Legal, People and Operations functions and corporate governance across AU, UK and US entities.</li>
-          <li>Prior experience leading P&amp;L, GTM and various team leadership responsibilities in AU and APAC.</li>
+      <div class="stage">
+        <div class="stage-label">Launch teams inside scaleups</div>
+        <div class="stage-cos">GrabFood &middot; Uber Eats</div>
+        <div class="stage-callout">Regional Strategy &amp; Ops leader for complex, competitive marketplace businesses</div>
+        <p>Launched and rapidly scaled new business units inside Grab and Uber, in some of APAC's most competitive markets.</p>
+        <ul class="stage-proof">
+          <li>GrabFood: launch to SEA #1 in &lt;2 years</li>
+          <li>500k+ merchant partners</li>
+          <li>Uber Eats APAC launch team, 7 countries</li>
         </ul>
       </div>
     </div>
@@ -438,7 +437,7 @@
             <div class="tl-role">Head of Strategic Operations and Regional Business Owner</div>
             <div class="tl-date">Jan 2019 &ndash; Dec 2020, &#127480;&#127468; Singapore</div>
           </div>
-          <div class="tl-sub">Series G to Pre-IPO (Softbank)</div>
+          <div class="tl-sub">GrabFood launch team &middot; Series G to Pre-IPO (Softbank)</div>
           <div class="tl-desc">Built and led Strategic Operations for GrabFood, the region's largest food delivery platform at South-East Asia's tech decacorn, reporting directly to the Head of GrabFood. Core part of the leadership team that took the business from launch to regional market leadership in under 2 years, owning reliability, profitability and product launch workstreams, and building high-performing teams from scratch.</div>
           <ul>
             <li><b>Marketplace Performance:</b> Owned key marketplace health activities across the region, at a scale of 500,000+ merchant partners and deliveries per day, with specific focus on Indonesia. Built and ran 6 squads against distinct marketplace outcomes: Consumer Ops, Marketplace, Ops Analytics and Insights, Product Ops, Merchant Strategy and Merchant Engagement.</li>
@@ -469,7 +468,7 @@
             <div class="tl-role">Regional Community Operations Manager</div>
             <div class="tl-date">Mar 2017 &ndash; Jun 2018, &#127480;&#127468; Singapore</div>
           </div>
-          <div class="tl-sub">Role ended due to Grab-Uber merger</div>
+          <div class="tl-sub">Uber Eats APAC launch team &middot; Role ended due to Grab-Uber merger</div>
           <div class="tl-desc">Scaled CX Ops during the hyper-growth regional launch of multiple Uber Eats markets, building processes that supported millions of transactions.</div>
           <ul>
             <li>Part of Uber Eats initial ops team during rapid launch and business growth phase across diverse APAC markets (South-East and North Asia).</li>
@@ -507,6 +506,7 @@
   </div>
   </div>
 </section>
+
 
 <section id="case-studies">
   <div class="wrap">
